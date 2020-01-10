@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.ArrayList;
+
 public class BusinessRule {
 	private int ID;
 	private String typeOfConstraint;
@@ -10,6 +12,8 @@ public class BusinessRule {
 	
 	private String secondColumn;
 	private String operator;
+	
+	private ArrayList<String> listOfValues;
 	
 	public BusinessRule(int ID, String tableName, String columnName, String typeOfConstraint) {
 		this.ID = ID;
@@ -80,6 +84,14 @@ public class BusinessRule {
 
 	public void setMinValue(String minValue) {
 		this.minValue = minValue;
+	}
+
+	public ArrayList<String> getListOfValues() {
+		return listOfValues;
+	}
+
+	public void setListOfValues(ArrayList<String> listOfValues) {
+		this.listOfValues = listOfValues;
 	}
 	
 	
